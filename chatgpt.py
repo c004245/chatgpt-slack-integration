@@ -1,14 +1,11 @@
 import openai
 
-# 발급받은 OpenAI API Key 기입
-YOUR_API_KEY = '<your-openai-api-key>'
+YOUR_API_KEY = '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'
 
 
 def ChatGPT(prompt, API_KEY=YOUR_API_KEY):
-    # api key 세팅
     openai.api_key = API_KEY
 
-    # ChatGPT API 호출 및 최신 언어 모델인 text-davinci-003을 가져옴
     completion = openai.Completion.create(
         engine='text-davinci-003'  # 'text-curie-001'  # 'text-babbage-001' #'text-ada-001'
         , prompt=prompt
